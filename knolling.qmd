@@ -31,7 +31,8 @@ For most use cases, I would actually recommend using the [PowerPoint template](h
 
 For repeated, HTML-based applications, I've replicated what is provided inthe PowerPoint using {gt} and {gtExtras} for 2, 3, 4, and 5 response options below.
 
-```{r setup}
+```{r setup, message = FALSE}
+knitr::opts_chunk$set(eval = FALSE, echo = TRUE)
 library(gt)
 library(gtExtras)
 library(tidyverse)
@@ -64,6 +65,7 @@ k2ro %>%
     scaled = TRUE) %>%
   tab_options(table.width = pct(100))
 ```
+![](k2ro.png)
 
 ## Three Response Options
 
@@ -97,6 +99,7 @@ k3ro %>%
     scaled = TRUE) %>%
   tab_options(table.width = pct(100))
 ```
+![](k3ro.png)
 
 ## Four Response Options
 
@@ -137,6 +140,7 @@ k4ro %>%
     scaled = TRUE) %>%
   tab_options(table.width = pct(100))
 ```
+![](k4ro.png)
 
 ## Five Response Options
 
@@ -184,3 +188,5 @@ k5ro %>%
     scaled = TRUE) %>%
   tab_options(table.width = pct(100))
 ```
+![](k5ro.png)
+
